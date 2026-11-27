@@ -1,5 +1,6 @@
 import sys
 from lexer import Lexer
+from parser import Parser
 
 # Compiler Driver
 """
@@ -43,8 +44,8 @@ def main():
 
     else:
         tokens = Lexer().lex(src)
-        for token in tokens:
-            print(token)
+        ast = Parser(tokens).parse()
+        print(ast)
 
     
 if __name__ == "__main__":

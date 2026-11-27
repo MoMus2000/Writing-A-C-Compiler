@@ -8,9 +8,9 @@ class Token:
 
 class Lexer:
     keywords = {
-        "return": Token("RETURN", ""),
-        "int": Token("INT", ""),
-        "void": Token("VOID", ""),
+        "return": Token("RETURN", "return"),
+        "int": Token("INT", "int"),
+        "void": Token("VOID", "void"),
     }
 
     def lex(self, stream_of_words):
