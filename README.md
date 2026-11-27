@@ -16,3 +16,10 @@ arch -x86_64 zsh
 ``` bash
 gcc -S -O -fno-asynchronous-unwind-tables -fcf-protection=none return_2.c
 ```
+
+### Workflow:
+
+- Lex
+- Parse
+- Emit Assembly
+- Use GCC and Clang to assemble and link
