@@ -43,7 +43,7 @@ class Lexer:
                 tokens.append(Token("SEMICOLON", ";"))
                 cursor += 1
 
-            if character.isalnum():
+            if character.isalpha():
                 initial = cursor
                 while stream_of_words[cursor].isalnum():
                     cursor += 1

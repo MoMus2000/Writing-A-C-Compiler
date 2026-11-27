@@ -27,21 +27,25 @@ def main():
         sys.exit(1)
 
     file_name = args[1]
-    with open(file_name, "r") as source_file:
-        src = source_file.read()
-        tokens = Lexer().lex(src)
-        print("Tokens: ", tokens)
-        for token in tokens:
-            print(token)
+
+    src = open(file_name, "r").read()
 
     if "--lex" in args and len(args) > 2:
-        pass
+        tokens = Lexer().lex(src)
+        for token in tokens:
+            print(token)
 
     elif "--parse" in args and len(args) > 2:
         pass
 
     elif "--codegen" in args and len(args) > 2:
         pass
+
+    else:
+        tokens = Lexer().lex(src)
+        for token in tokens:
+            print(token)
+
     
 if __name__ == "__main__":
     main()
